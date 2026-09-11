@@ -551,25 +551,25 @@ body {
 .xx-section--warm { background: transparent !important; }
 .xx-closing { background: transparent !important; }
 
-/* v7: Deep cloud sky hero */
+/* v7: Deep cloud sky hero — seamless single layer, no tiling */
 .xx-page::before {
   background:
-    radial-gradient(ellipse 65% 250px at 60% 150px, rgba(195, 218, 240, 0.4) 0%, rgba(200, 220, 240, 0.15) 50%, transparent 75%),
-    radial-gradient(ellipse 40% 200px at 15% 550px, rgba(190, 215, 238, 0.35) 0%, rgba(200, 222, 242, 0.1) 55%, transparent 78%),
-    radial-gradient(ellipse 55% 180px at 75% 750px, rgba(195, 220, 242, 0.38) 0%, rgba(205, 225, 240, 0.12) 50%, transparent 72%),
-    radial-gradient(ellipse 35% 160px at 40% 900px, rgba(188, 212, 235, 0.3) 0%, transparent 70%),
-    radial-gradient(ellipse 70% 220px at 50% 200px, rgba(255, 253, 245, 1) 0%, rgba(250, 246, 236, 0.75) 28%, transparent 62%),
-    radial-gradient(ellipse 50% 180px at 85% 350px, rgba(255, 252, 242, 0.95) 0%, rgba(248, 244, 232, 0.6) 30%, transparent 65%),
-    radial-gradient(ellipse 55% 190px at 12% 300px, rgba(254, 250, 240, 0.95) 0%, rgba(248, 244, 232, 0.55) 32%, transparent 68%),
-    radial-gradient(ellipse 45% 150px at 30% 80px, rgba(255, 252, 244, 0.9) 0%, rgba(248, 244, 234, 0.5) 35%, transparent 68%),
-    radial-gradient(ellipse 60% 170px at 65% 600px, rgba(255, 252, 242, 0.92) 0%, rgba(250, 246, 234, 0.6) 30%, transparent 66%),
-    radial-gradient(ellipse 50% 160px at 20% 750px, rgba(255, 253, 245, 0.9) 0%, rgba(250, 246, 236, 0.5) 32%, transparent 65%),
-    radial-gradient(ellipse 40% 140px at 90% 100px, rgba(252, 250, 242, 0.85) 0%, rgba(248, 244, 234, 0.4) 38%, transparent 65%),
-    radial-gradient(ellipse 55% 150px at 45% 480px, rgba(255, 252, 244, 0.88) 0%, rgba(250, 246, 234, 0.5) 30%, transparent 64%),
-    radial-gradient(ellipse 45% 120px at 55% 430px, rgba(180, 200, 222, 0.28) 0%, transparent 60%),
-    radial-gradient(ellipse 35% 100px at 35% 250px, rgba(175, 198, 220, 0.22) 0%, transparent 55%);
-  background-size: 100% clamp(720px, 60vw + 400px, 1000px) !important;
-  background-repeat: repeat-y !important;
+    radial-gradient(ellipse 65% 25% at 60% 15%, rgba(195, 218, 240, 0.4) 0%, rgba(200, 220, 240, 0.15) 50%, transparent 75%),
+    radial-gradient(ellipse 40% 20% at 15% 55%, rgba(190, 215, 238, 0.35) 0%, rgba(200, 222, 242, 0.1) 55%, transparent 78%),
+    radial-gradient(ellipse 55% 18% at 75% 75%, rgba(195, 220, 242, 0.38) 0%, rgba(205, 225, 240, 0.12) 50%, transparent 72%),
+    radial-gradient(ellipse 35% 16% at 40% 90%, rgba(188, 212, 235, 0.3) 0%, transparent 70%),
+    radial-gradient(ellipse 70% 22% at 50% 20%, rgba(255, 253, 245, 1) 0%, rgba(250, 246, 236, 0.75) 28%, transparent 62%),
+    radial-gradient(ellipse 50% 18% at 85% 35%, rgba(255, 252, 242, 0.95) 0%, rgba(248, 244, 232, 0.6) 30%, transparent 65%),
+    radial-gradient(ellipse 55% 19% at 12% 30%, rgba(254, 250, 240, 0.95) 0%, rgba(248, 244, 232, 0.55) 32%, transparent 68%),
+    radial-gradient(ellipse 45% 15% at 30% 8%, rgba(255, 252, 244, 0.9) 0%, rgba(248, 244, 234, 0.5) 35%, transparent 68%),
+    radial-gradient(ellipse 60% 17% at 65% 60%, rgba(255, 252, 242, 0.92) 0%, rgba(250, 246, 234, 0.6) 30%, transparent 66%),
+    radial-gradient(ellipse 50% 16% at 20% 75%, rgba(255, 253, 245, 0.9) 0%, rgba(250, 246, 236, 0.5) 32%, transparent 65%),
+    radial-gradient(ellipse 40% 14% at 90% 10%, rgba(252, 250, 242, 0.85) 0%, rgba(248, 244, 234, 0.4) 38%, transparent 65%),
+    radial-gradient(ellipse 55% 15% at 45% 48%, rgba(255, 252, 244, 0.88) 0%, rgba(250, 246, 234, 0.5) 30%, transparent 64%),
+    radial-gradient(ellipse 45% 12% at 55% 43%, rgba(180, 200, 222, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 10% at 35% 25%, rgba(175, 198, 220, 0.22) 0%, transparent 55%);
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
   filter: blur(clamp(9px, 1vw + 5px, 15px));
   -webkit-mask-image: none !important;
   mask-image: none !important;
@@ -1055,24 +1055,26 @@ body { background: var(--cream) !important; }
   .xx-nav__burger span {
     display: block !important;
     width: 16px !important;
-    height: 0.5px !important;
+    height: 1px !important;
     background: var(--fg1) !important;
     border-radius: 0 !important;
     transition: transform 300ms ease, opacity 200ms ease !important;
-    transform: translateZ(0) !important;
-    -webkit-transform: translateZ(0) !important;
+    transform: translateZ(0) scaleY(0.5) !important;
+    -webkit-transform: translateZ(0) scaleY(0.5) !important;
   }
   .xx-nav__burger span:first-child,
   .xx-nav__burger span:last-child {
-    height: 0.5px !important;
-    width: 16px !important;
-    background: var(--fg1) !important;
+    height: 1px !important;
+    transform: translateZ(0) scaleY(0.5) !important;
+    -webkit-transform: translateZ(0) scaleY(0.5) !important;
   }
   .xx-nav__burger span:nth-child(2) {
     width: 3px !important;
     height: 3px !important;
     border-radius: 50% !important;
     background: var(--lime) !important;
+    transform: none !important;
+    -webkit-transform: none !important;
   }
   /* Mobile menu overlay */
   .xx-nav__mobile-menu {
@@ -1273,7 +1275,7 @@ body { background: var(--cream) !important; }
   .xx-showcase--v35 .xx-pcard__media {
     height: auto !important;
     min-height: 0 !important;
-    aspect-ratio: 3 / 5 !important;
+    aspect-ratio: 3 / 4 !important;
   }
   .xx-showcase--v35 .xx-pcard__cap {
     opacity: 1 !important;
@@ -1617,28 +1619,6 @@ body { background: var(--cream) !important; }
 /* Hide category tags on matter cards */
 [data-showcase="evidence"] .xx-pcard__cat { display: none !important; }
 
-/* ── Mobile cloud gradient fix ── */
-@media (max-width: 768px) {
-  .xx-page::before {
-    background:
-      radial-gradient(ellipse 160% 200px at 60% 120px, rgba(195, 218, 240, 0.4) 0%, rgba(200, 220, 240, 0.15) 50%, transparent 75%),
-      radial-gradient(ellipse 140% 160px at 15% 400px, rgba(190, 215, 238, 0.35) 0%, rgba(200, 222, 242, 0.1) 55%, transparent 78%),
-      radial-gradient(ellipse 155% 150px at 75% 560px, rgba(195, 220, 242, 0.38) 0%, rgba(205, 225, 240, 0.12) 50%, transparent 72%),
-      radial-gradient(ellipse 130% 130px at 40% 680px, rgba(188, 212, 235, 0.3) 0%, transparent 70%),
-      radial-gradient(ellipse 170% 180px at 50% 160px, rgba(255, 253, 245, 1) 0%, rgba(250, 246, 236, 0.75) 28%, transparent 62%),
-      radial-gradient(ellipse 150% 140px at 85% 280px, rgba(255, 252, 242, 0.95) 0%, rgba(248, 244, 232, 0.6) 30%, transparent 65%),
-      radial-gradient(ellipse 155% 150px at 12% 240px, rgba(254, 250, 240, 0.95) 0%, rgba(248, 244, 232, 0.55) 32%, transparent 68%),
-      radial-gradient(ellipse 145% 120px at 30% 60px, rgba(255, 252, 244, 0.9) 0%, rgba(248, 244, 234, 0.5) 35%, transparent 68%),
-      radial-gradient(ellipse 160% 140px at 65% 460px, rgba(255, 252, 242, 0.92) 0%, rgba(250, 246, 234, 0.6) 30%, transparent 66%),
-      radial-gradient(ellipse 150% 130px at 20% 560px, rgba(255, 253, 245, 0.9) 0%, rgba(250, 246, 236, 0.5) 32%, transparent 65%),
-      radial-gradient(ellipse 140% 110px at 90% 80px, rgba(252, 250, 242, 0.85) 0%, rgba(248, 244, 234, 0.4) 38%, transparent 65%),
-      radial-gradient(ellipse 155% 120px at 45% 370px, rgba(255, 252, 244, 0.88) 0%, rgba(250, 246, 234, 0.5) 30%, transparent 64%),
-      radial-gradient(ellipse 145% 100px at 55% 330px, rgba(180, 200, 222, 0.28) 0%, transparent 60%),
-      radial-gradient(ellipse 130% 80px at 35% 200px, rgba(175, 198, 220, 0.22) 0%, transparent 55%) !important;
-    background-size: 100% 720px !important;
-    filter: blur(9px) !important;
-  }
-}
 </style>
 <style>
 /* No-name matters: gentle blur on expanded card to shift focus to text */
